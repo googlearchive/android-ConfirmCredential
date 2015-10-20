@@ -15,7 +15,7 @@ which can be only be used after the user has authenticated after the user is aut
 with their device credentials and pass [KeyGenParameterSpec][2].
 
 By setting an integer value to the
-[KeyGeneratorSpec.Builder.setUserAuthenticationValidityDurationSeconds][3], you can consider the
+[KeyGenParameterSpec.Builder.setUserAuthenticationValidityDurationSeconds][3], you can consider the
 user as authenticated if the user has been authenticated with the device credentials
 within the last x seconds.
 
@@ -23,9 +23,9 @@ Then by calling [KeyguardManager.createConfirmDeviceCredentialIntent][4], you ca
 to confirm device credentials to the user.
 
 [1]: https://developer.android.com/reference/javax/crypto/KeyGenerator.html
-[2]: https://developer.android.com/reference/android/security/KeyGenParameterSpec.html
-[3]: https://developer.android.com/reference/android/security/KeyGenParameterSpec.Builder#setUserAuthenticationValidityDurationSeconds().html
-[4]: https://developer.android.com/reference/android/app/KeyguardManager.createConfirmDeviceCredentialIntent().html
+[2]: https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html
+[3]: https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html#setUserAuthenticationValidityDurationSeconds%28int%29
+[4]: https://developer.android.com/reference/android/app/KeyguardManager.html#createConfirmDeviceCredentialIntent%28java.lang.CharSequence,%20java.lang.CharSequence%29
 
 Pre-requisites
 --------------
