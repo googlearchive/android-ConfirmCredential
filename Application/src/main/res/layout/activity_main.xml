@@ -31,6 +31,7 @@
                 android:layout_marginBottom="32dp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="fitCenter"
+                android:contentDescription="@string/description_bugdroid_icon"
                 android:src="@drawable/android_robot"/>
 
         <LinearLayout
@@ -77,8 +78,7 @@
                 android:layout_gravity="end"
                 android:textColor="?android:attr/textColorPrimaryInverse"
                 android:text="@string/purchase"
-                android:id="@+id/purchase_button"
-                android:layout_alignParentEnd="true"/>
+                android:id="@+id/purchase_button" />
 
         <TextView
                 android:id="@+id/confirmation_message"
@@ -101,7 +101,6 @@
                 android:paddingEnd="16dp"
                 android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 android:textColor="?android:attr/colorAccent"
-                android:text="@string/already_confirmed_device_credentials_within_last_x_seconds"
                 android:visibility="gone"/>
     </LinearLayout>
 </ScrollView>

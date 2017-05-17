@@ -92,7 +92,7 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * Tries to encrypt some data with the generated key in {@link #createKey} which is
+     * Tries to encrypt some data with the generated key in {@link #createKey} which
      * only works if the user has just authenticated via device credentials.
      */
     private boolean tryEncrypt() {
@@ -181,6 +181,7 @@ public class MainActivity extends Activity {
             } else {
                 // The user canceled or didn’t complete the lock screen
                 // operation. Go to error/cancellation flow.
+                Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -194,9 +195,9 @@ public class MainActivity extends Activity {
         TextView textView = (TextView) findViewById(
                 R.id.already_has_valid_device_credential_message);
         textView.setVisibility(View.VISIBLE);
-        textView.setText(getString(
-                R.string.already_confirmed_device_credentials_within_last_x_seconds,
-                AUTHENTICATION_DURATION_SECONDS));
+        textView.setText(getResources().getQuantityString(
+                R.plurals.already_confirmed_device_credentials_within_last_x_seconds,
+                AUTHENTICATION_DURATION_SECONDS, AUTHENTICATION_DURATION_SECONDS));
         findViewById(R.id.purchase_button).setEnabled(false);
     }
 

@@ -20,6 +20,11 @@
     <string name="item_price">$62.68</string>
     <string name="item_description">Mesh backpack in white. Black textile trim throughout.</string>
     <string name="purchase_done">Device credential confirmed.</string>
-    <string name="already_confirmed_device_credentials_within_last_x_seconds">
-        The device credential has been already confirmed within the last %1$s seconds.</string>
+    <plurals name="already_confirmed_device_credentials_within_last_x_seconds">
+        <item quantity="one">The device credential has been already confirmed within the last
+            %1$d second.</item>
+        <item quantity="other">The device credential has been already confirmed within the last
+            %1$d seconds.</item>
+    </plurals>
+    <string name="description_bugdroid_icon">Android bugdroid image</string>
 </resources>
